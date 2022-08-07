@@ -3,14 +3,14 @@
 //variable, evitando valores no soportados, y tambien en lugar de usar literal types
 //
 //Se recomienda como standard nombrarlos en mayúsculas, de igual forma las claves que contenga
-enum ROLES {
+export enum ROLES {
   ADMIN = "admin",
   SELLER = "seller",
   CUSTOMER = "cst",
 }
 
 //Ejemplo de uso
-type User = {
+export type User = {
   username: string;
   role: ROLES;
 }
