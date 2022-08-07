@@ -13,34 +13,34 @@ anyVar.doSomething();
 anyVar.touppercase();
 
 
-//La principal diferencia de any vs unknow, es que unknow
+//La principal diferencia de any vs unknown, es que unknown
 //no permite realizar ninguna acción con el valor si primero
 //no es validado para estar seguros del tipo del valor``
-let unknowVar: unknown;
-unknowVar = true;
-unknowVar = undefined;
-unknowVar = null;
-unknowVar = 1;
-unknowVar = [];
-unknowVar = {};
+let unknownVar: unknown;
+unknownVar = true;
+unknownVar = undefined;
+unknownVar = null;
+unknownVar = 1;
+unknownVar = [];
+unknownVar = {};
 
 
-// unknowVar.doSomething(); // esto genera error
+// unknownVar.doSomething(); // esto genera error
 // Se tiene que validar primero el tipo
-if (typeof unknowVar === 'string') {
+if (typeof unknownVar === 'string') {
   // Una vez validado el tipo de dato, es posible
   // regresar a las bondades de typescript como el tipado
   // de datos y el análisis de código estático
-  unknowVar.toUpperCase();
+  unknownVar.toUpperCase();
 }
-if (typeof unknowVar === 'boolean') {
-  let isNewV2: boolean = unknowVar;
+if (typeof unknownVar === 'boolean') {
+  let isNewV2: boolean = unknownVar;
 }
 
-//Ejemplo de una función que retorna un JSON con contenido unknow
+//Ejemplo de una función que retorna un JSON con contenido unknown
 const parse = (str: string): unknown => {
   return JSON.parse(str);
 }
 
-//Conclusión, es altamente recomendable usar "unknow" en lugar de "any"
+//Conclusión, es altamente recomendable usar "unknown" en lugar de "any"
 //simpre debe evitarse "any" lo más que sea posible
