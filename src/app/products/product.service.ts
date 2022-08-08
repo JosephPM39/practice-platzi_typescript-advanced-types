@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import { CreateProductDto, UpdateProductDto } from './product.dto';
+import { CreateProductDto, FindProductDto, UpdateProductDto } from './product.dto';
 import { Product } from './product.model';
 
 
@@ -31,6 +31,14 @@ export const updateProduct = (id: string, changes: UpdateProductDto): Product =>
     ...changes
   }
   return products[index];
+}
+
+export const findProducts = (dto: FindProductDto): Product[] => {
+  // This is impossible, because FindProductDTO's properties are readonly
+  // code
+  // dto.color = 'blue';
+  // dto.isNew = true;
+  return products;
 }
 
 const deleteProduct = (id: string): void => {

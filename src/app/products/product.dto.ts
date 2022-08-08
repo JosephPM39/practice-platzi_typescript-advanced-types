@@ -13,3 +13,9 @@ export interface UpdateProductDto extends Partial<CreateProductDto> {}
 
 //Example with Required (inverse of Partial)
 type example2 = Required<Product>;
+
+//Creating a DTO with all properties are Readonly and Partial
+export interface FindProductDto extends Readonly<Partial<Product>> {}
+
+//Example with Readonly
+type example3 = Readonly<Product>;
