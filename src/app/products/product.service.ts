@@ -23,7 +23,8 @@ export const addProduct = (data: CreateProductDto) => {
   return newProduct;
 }
 
-export const updateProduct = (id: string, changes: UpdateProductDto): Product => {
+//Using index type on Id param
+export const updateProduct = (id: Product['id'], changes: UpdateProductDto): Product => {
   const index = products.findIndex(item => item.id === id);
   const prevData = products[index];
   products[index] = {
