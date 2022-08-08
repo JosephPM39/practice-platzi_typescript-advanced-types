@@ -9,7 +9,7 @@ export interface CreateProductDto extends Omit<Product, 'id' | 'createdAt' | 'up
 type example = Pick<Product, 'color' | 'description'>;
 
 //Creating a DTO where all properties are optional with Partial<>
-export interface UpdateProductDto extends Partial<CreateProductDto>, Pick<Product, 'id'> {}
+export interface UpdateProductDto extends Partial<CreateProductDto> {}
 
 //Example with Required (inverse of Partial)
 type example2 = Required<Product>;
